@@ -42,6 +42,10 @@ For multiple files:
 
 ```matlab
 dependencies = DependencyManager.findDeps(["script1.m", "script2.m"]);
+dependencies = DependencyManager.findDeps([ ...
+				fullfile(root, "file.m");
+				fullfile(root, "library\**\*.m");
+				fullfile(root, "library\**\*.slx")]);
 ```
 
 Using wildcards to scan folders:
@@ -76,7 +80,7 @@ requiredToolboxes = DependencyManager.findDeps("example.m");
 isInstalled = DependencyManager.isDepInstalled(requiredToolboxes);
 
 % Save dependencies to a file
-DependencyManager.writeDeps(requiredToolboxes, "dependencies.txt");
+DependencyManager.writeDeps(requiredToolboxes, "DEPENDENCIES.txt");
 ```
 
 ## License
@@ -86,4 +90,4 @@ This project is licensed under the BSD 3-Clause License. See the `LICENSE` file 
 ## Acknowledgments
 
 Updated  from [matlab_dependency_manager](https://github.com/TU-Delft-DCC/matlab_dependency_manager) by the TU Delft Digital Competence Centre.
-Modified from [MatlabUtils](https://github.com/CarmVarriale/MatlabUtils) by Carmine Varriale.
+Original version by Carmine Varriale.
