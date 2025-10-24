@@ -19,7 +19,7 @@ classdef testDependencyManager < matlab.unittest.TestCase
 	
 		function createTempFile(testCase)
 			% Create a temporary file for testing read/write functions
-			testCase.tempFile = 'deps.txt';
+			testCase.tempFile = "deps.txt";
 		end
 
 	end
@@ -28,7 +28,7 @@ classdef testDependencyManager < matlab.unittest.TestCase
 		
 		function deleteTempFile(testCase)
 			% Clean up temporary file
-			if exist(testCase.tempFile, 'file')
+			if exist(testCase.tempFile, "file")
 				delete(testCase.tempFile);
 			end
 		end
