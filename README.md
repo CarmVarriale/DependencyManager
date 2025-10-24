@@ -32,7 +32,7 @@ isInstalled = DependencyManager.isDepInstalled(["Aerospace Toolbox", "Curve Fitt
 
 ### 2. Find Dependencies of MATLAB Files
 
-To analyze the dependencies required for executing a file or a set of files:
+To analyse the dependencies required for executing a file or a set of files:
 
 ```matlab
 dependencies = DependencyManager.findDeps("myScript.m");
@@ -83,11 +83,17 @@ isInstalled = DependencyManager.isDepInstalled(requiredToolboxes);
 DependencyManager.writeDeps(requiredToolboxes, "DEPENDENCIES.txt");
 ```
 
-## License
+The `DEPENDENCIES.txt` in this repository has been generated using the following one-line command:
 
-This project is licensed under the BSD 3-Clause License. See the `LICENSE` file for details.
+```matlab
+DependencyManager.writeDeps(DependencyManager.findDeps("@DependencyManager/**"))
+```
+
+## Licence
+
+This project is licensed under the BSD 3-Clause Licence. See the `LICENSE` file for details.
 
 ## Acknowledgments
 
-Updated  from [matlab_dependency_manager](https://github.com/TU-Delft-DCC/matlab_dependency_manager) by the TU Delft Digital Competence Centre.
+Updated from [matlab_dependency_manager](https://github.com/TU-Delft-DCC/matlab_dependency_manager) by the TU Delft Digital Competence Centre.
 Original version by Carmine Varriale.
