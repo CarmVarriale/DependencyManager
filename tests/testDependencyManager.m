@@ -6,15 +6,6 @@ classdef testDependencyManager < matlab.unittest.TestCase
 	
 	end
 
-	methods (TestClassSetup)
-
-		function addClassToPath(testCase)
-			testCase.applyFixture( ...
-				matlab.unittest.fixtures.PathFixture(".."));
-		end
-		
-	end
-
 	methods (TestMethodSetup)
 	
 		function createTempFile(testCase)
