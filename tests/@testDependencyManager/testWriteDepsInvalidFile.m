@@ -1,0 +1,6 @@
+function testWriteDepsInvalidFile(testCase)
+% Test handling of invalid file path
+testCase.verifyError( ...
+	@() DependencyManager.writeDeps("MATLAB", ""), ...
+	"DependencyManager:FileError");
+end
