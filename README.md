@@ -19,6 +19,9 @@ openProject("path/to/DependencyManager");
 The project puts DependencyManager on the MATLAB path.
 Run its tests with `runtests("tests")` from the project root.
 
+## Documentation
+The documentation of DependencyManager is the help text of its code: read it in MATLAB with `help` and `doc`, e.g. `doc DependencyManager`.
+
 ## Dependencies
 There are no external dependencies.
 
