@@ -1,5 +1,5 @@
 function testreadDepsNonExistent(testCase)
-% Test reading from a non-existent file
+% Test that readDeps errors on a file that does not exist
 testCase.verifyError( ...
 	@() DependencyManager.readDeps("fake_file.txt"), ...
 	"DependencyManager:FileError");

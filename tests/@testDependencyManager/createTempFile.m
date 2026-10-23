@@ -1,4 +1,4 @@
 function createTempFile(testCase)
-% Create a temporary file for testing read/write functions
+% Name the temporary file that the writeDeps and readDeps tests use
 testCase.tempFile = "deps.txt";
 end

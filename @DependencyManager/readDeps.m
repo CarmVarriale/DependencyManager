@@ -1,5 +1,13 @@
 function depNames = readDeps(depFile)
-% Reads the names of required MATLAB products from a text file
+% Read the names of MathWorks products from a dependency file
+%
+% depFile is a file written by writeDeps: its header, with the MATLAB
+% version, is skipped, and depNames holds the names that follow, one per
+% line.
+%
+% Errors when depFile cannot be opened.
+%
+% See also: writeDeps, isDepInstalled
 arguments (Input)
 	depFile (1,1) string = DependencyManager.DEPENDENCY_FILE
 end

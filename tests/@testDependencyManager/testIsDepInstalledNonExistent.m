@@ -1,5 +1,5 @@
 function testIsDepInstalledNonExistent(testCase)
-% Test a non-existent toolbox
+% Test that isDepInstalled is false for a product that does not exist
 testCase.verifyFalse( ...
 	DependencyManager.isDepInstalled("Fake Toolbox"));
 end

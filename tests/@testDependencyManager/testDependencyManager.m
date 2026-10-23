@@ -1,8 +1,9 @@
 classdef testDependencyManager < matlab.unittest.TestCase
+	% testDependencyManager: Tests of DependencyManager
 
 	properties
 
-		tempFile
+		tempFile % file name for the writeDeps and readDeps tests
 
 	end
 

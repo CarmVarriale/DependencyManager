@@ -1,5 +1,5 @@
 function testFindDepsInvalidFile(testCase)
-% Test with a non-existing file
+% Test that findDeps returns no products for a file that does not exist
 testCase.verifyEmpty( ...
 	DependencyManager.findDeps("nonexistent.m"));
 end

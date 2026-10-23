@@ -1,5 +1,5 @@
 function testWriteDepsValid(testCase)
-% Test writing dependencies to a file
+% Test that writeDeps writes the file and returns true
 exitFlag = DependencyManager.writeDeps( ...
 	["MATLAB", "Simulink"], ...
 	testCase.tempFile);

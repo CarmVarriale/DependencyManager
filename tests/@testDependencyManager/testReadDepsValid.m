@@ -1,5 +1,5 @@
 function testReadDepsValid(testCase)
-% Write dependencies and then read them
+% Test that readDeps returns the names that writeDeps wrote
 DependencyManager.writeDeps( ...
 	["MATLAB", "Simulink"], ...
 	testCase.tempFile);

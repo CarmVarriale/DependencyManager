@@ -1,7 +1,12 @@
 function depNames = findDeps(fileList)
-% Returns the MATLAB products necessary to execute the files in the
-% indicated fileList. The fileList can include the wildcards of dir,
-% e.g. "library/**/*.m"
+% Find the MathWorks products needed by the files in a list
+%
+% Each element of fileList is a path for dir, wildcards included: e.g.
+% "library/**/*.m" for the M-files in library and in its subfolders.
+% depNames lists the products that the files need, leaving out the MATLAB
+% projects to which they belong. Paths that match no file add nothing.
+%
+% See also: writeDeps, isDepInstalled
 arguments (Input)
 	fileList (:,1) string {mustBeNonempty}
 end

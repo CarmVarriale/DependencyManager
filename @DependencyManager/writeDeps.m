@@ -1,5 +1,13 @@
 function exitFlag = writeDeps(depNames, depFile)
-% Writes the MATLAB products necessary to execute the indicated files
+% Write the names of MathWorks products to a dependency file
+%
+% Writes depFile in the current folder, replacing its contents: a header
+% with the MATLAB version, then depNames, one per line. exitFlag is true
+% when the file is closed without errors, and then a message is printed.
+%
+% Errors when depFile cannot be opened, or when writing to it fails.
+%
+% See also: readDeps, findDeps
 arguments (Input)
 	depNames (:,1) string
 	depFile (1,1) string = DependencyManager.DEPENDENCY_FILE
