@@ -1,9 +1,10 @@
 function exitFlag = writeDeps(depNames, depFile)
 % Write the names of MathWorks products to a dependency file
 %
-% Writes depFile in the current folder, replacing its contents: a header
-% with the MATLAB version, then depNames, one per line. exitFlag is true
-% when the file is closed without errors, and then a message is printed.
+% Writes depFile, a path relative to the current folder or an absolute
+% one, replacing its contents: a header with the MATLAB version, then
+% depNames, one per line. exitFlag is true when the file is closed
+% without errors, and then a message is printed.
 %
 % Errors when depFile cannot be opened, or when writing to it fails.
 %
@@ -15,7 +16,7 @@ end
 arguments (Output)
 	exitFlag (1,1) logical
 end
-fid = fopen(fullfile(pwd, depFile), "w");
+fid = fopen(depFile, "w");
 if fid == -1
 	error( ...
 		"DependencyManager:FileError", ...

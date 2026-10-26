@@ -29,8 +29,9 @@ classdef testDependencyManager < matlab.unittest.TestCase
 		testFindDepsInvalidFile(testCase)
 		testWriteDepsValid(testCase)
 		testWriteDepsInvalidFile(testCase)
+		testWriteDepsAbsolutePath(testCase)
 		testReadDepsValid(testCase)
-		testreadDepsNonExistent(testCase)
+		testReadDepsNonExistent(testCase)
 
 	end
 end
