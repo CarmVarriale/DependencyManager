@@ -1,5 +1,5 @@
 MATLAB Version:
- 	25.2.0.2998904 (R2025b)
+ 	26.2.0.3386108 (R2026b)
 
 Dependencies:
 	MATLAB

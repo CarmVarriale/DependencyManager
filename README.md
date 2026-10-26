@@ -12,10 +12,15 @@ Clone this repo to a local folder with the following command in the terminal:
    git clone https://github.com/CarmVarriale/DependencyManager
 ```
 
-Add it to your MATLAB path with the following command in MATLAB's command window:
+Open it as a MATLAB project (R2026b or later) with the following command in MATLAB's command window:
 ```matlab
-addpath("path/to/DependencyManager");
+openProject("path/to/DependencyManager");
 ```
+The project puts DependencyManager on the MATLAB path.
+Run its tests with `runtests("tests")` from the project root.
+
+## Documentation
+The documentation of DependencyManager is the help text of its code: read it in MATLAB with `help` and `doc`, e.g. `doc DependencyManager`.
 
 ## Dependencies
 There are no external dependencies.

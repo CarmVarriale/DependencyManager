@@ -1,6 +1,14 @@
 classdef DependencyManager
-	% Manage MATLAB toolbox dependencies
+	% DependencyManager: A manager of the MathWorks products that code needs
 	%
+	% It finds the MathWorks products that MATLAB files need, writes them to
+	% a text file with the MATLAB version, DEPENDENCIES.txt by default, reads
+	% them back from that file, and checks whether they are installed. Its
+	% methods are static: call them on the class, as in
+	% DependencyManager.isDepInstalled("MATLAB").
+	%
+	% See also: findDeps, writeDeps, readDeps, isDepInstalled
+
 	% Adopted from https://github.com/TU-Delft-DCC/matlab_dependency_manager/
 	% License under the BSD 3-Clause License
 	%
@@ -35,7 +43,7 @@ classdef DependencyManager
 
 	properties (Constant)
 
-		DEPENDENCY_FILE = "DEPENDENCIES.txt"
+		DEPENDENCY_FILE = "DEPENDENCIES.txt" % default dependency file
 	
 	end
 

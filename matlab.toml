@@ -1,0 +1,9 @@
+name = "DependencyManager"
+
+[folders]
+path = [
+    ".",
+]
+test = [
+    "tests",
+]

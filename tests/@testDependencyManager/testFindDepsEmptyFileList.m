@@ -1,0 +1,6 @@
+function testFindDepsEmptyFileList(testCase)
+% Test that findDeps errors on an empty list of files
+testCase.verifyError( ...
+	@() DependencyManager.findDeps(string.empty), ...
+	"MATLAB:validators:mustBeNonempty");
+end
